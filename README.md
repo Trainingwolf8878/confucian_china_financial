@@ -5,7 +5,7 @@
 This repo will follow a reproduction of Zhiwu Chen, Chicheng Ma and Andrew J. Sinclair and [**'Banking on The Confucian Clan: Why China Developed Financial Markets So Late.'**](https://academic.oup.com/ej/article/132/644/1378/6382992?login=false#353294862
 ), containing data, 'R' scripts and a final 'PDF' report ([link here]()). This is research underscores the significance of cultural influence on economic development.
 
-The original data : <https://doi.org/10.5281/zenodo.5525846.>
+The original data : <https://doi.org/10.5281/zenodo.5525846>
 
 ## Statement on LLM Usage
 
