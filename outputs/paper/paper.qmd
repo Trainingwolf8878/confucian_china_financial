@@ -1,0 +1,163 @@
+---
+title: "Behind Traditional Values: Confucian Clans and the Historical Trajectory of Chinese Financial Development"
+author: Lin Dai
+date: 10 Feb 2024
+abstract: After the Opium War from 1839 to 1841, China was compelled to adopt Western financial models. The construction of modern banks steadily increased from 1897 to 1936. The article employs hypothesis testing to examine whether Confucian ideology hinders financial development. Confucian thought in China proves detrimental to external financing, resulting in sluggish financial development. The research underscores the significance of cultural influence on economic development, raising the question of whether cultural development affects economic progress.
+format: pdf
+editor: visual
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+#install.packages("tidyverse")
+#install.packages("ggplot2")
+#install.packages("janitor")
+#install.packages("dplyr")
+#install.packages("knitr")
+library(tidyverse)
+library(ggplot2)
+library(janitor)
+library(dplyr)
+library(knitr)
+```
+
+# Introduction
+
+Over the course of millennia, the trajectory of China's financial development has been shaped by the influence of clan-based cultural ideologies, molding the values, social structure, and financial framework of the Chinese people. After the Opium War, the power of Western technology and capital became evident, force China's financial market to adopt Western financial institutions. By contrasting the corporate entity system in Western countries with the clan-based system in Chinese Confucian thought, this research explores the impact of these two systems on social and economic development. Chinese Confucian thought emphasizes the role of family and kinship in economic factors, while Western legal systems prioritize rules and laws. The peak of clan influence in China was in 1897. Utilizing the growth in genealogy density in 283 regions heavily influenced by clan ideologies, the study compares the growth of modern bank constructions in these areas. It is observed that when genealogy density doubles, there is a 5.6% reduction in bank density. This comparison reveals that robust clan relationships hinder financial development. Through theoretical reasoning and empirical data, the study argues that the West adopted corporations for interpersonal cooperation, whereas China focused on clan-based systems. This institutional choice, emerging after the rise of long-distance ocean trade, resulted in divergent trajectories in financial development. The paper will follow a reproduction of Zhiwu Chen, Chicheng Ma and Andrew J. Sinclair and “Banking on The Confucian Clan: Why China Developed Financial Markets So Late.” The reproduction was conducted using the statistical programming language R (R Core Team 2020). To further enable out analysis we employed the use of the following packages: Tidyverse, Janitor, ggplot2, usethis, gitcreds, knitr. The paper begins with the introduction of the background and discussion of the data source. Then make a review of the variables used for reproduction. The estimand which we intend to do interest is to assess whether the elevation in bank lending is influenced by Confucian factors. Based on the interesting question, I am validating whether modern young people are willing to engage in lending activities through a Google survey. Thus, to assess whether modern young people have been influenced less by Confucian ideology.
+
+# Data
+
+## Background
+
+The number of bank establishments from 1897 to 1936, with 1897 marking the peak of Confucian influence in China, was examined. A total of 283 regions heavily influenced by Confucian thought were included in the analysis. Genealogical books were utilized as data, with one book compiled for every ten thousand individuals. These books documented the number of males in each family and provided detailed explanations of the rules governing interactions between clans. The books served to enhance solidarity and internal communication among clans to the greatest extent possible. Also, we using the private-loan data from the China Historical Interest Rate dataset in Chen et al. (2016).
+
+## Methodology
+
+By establishing a relationship between the data on genealogical book density and the density of modern bank establishments, we can understand the impact of Confucian thought on the construction of modern banks. Furthermore, through a comparison of private loan interest rate data and genealogical book density data, we can identify regions deeply influenced by clans. By assessing the decrease or increase in interest rates, we can validate the issue of clans' reluctance to borrow from banks leading to a reduction in interest rates.
+
+## Source
+
+This paper will replicate the bank data that was originally collected for the [**'Banking on The Confucian Clan: Why China Developed Financial Markets So Late.'**](https://academic.oup.com/ej/article/132/644/1378/6382992?login=false#353294862). The data was collected by the Zhiwu Chen, Chicheng Ma and Andrew J. Sinclair.
+
+## Quality
+
+By analyzing the variables, it was observed that a significant portion of the population data contains decimal values. This is attributed to the population data being derived from estimated values in census surveys. However, these decimal values in the analysis process may lead to results that seem irrational. To address this, the round function in R was applied to round these data points. For missing values, the na.omit function in R was used for removal since missing values can distort the accuracy of data averages.
+
+## Steps
+
+The raw data from the source cannot be used directly. Upon inspecting the dataset, it was observed that some population numbers are non-integers, and there are outliers in the interest rate column, exceeding 3000%. To address these issues, the following steps were taken:
+
+[Handling Missing Data]{.underline}
+
+The na.omit function was applied to identify and remove rows with missing data.
+
+```{r}
+# data <- na.omit(data)
+```
+
+[Managing Interest Rate Outliers]{.underline}
+
+To address excessively large interest rates. This step aimed to exclude outliers and ensure that interest rates are within a reasonable range.
+
+```{r}
+# data <- data[data$interestrate < 30, ]
+```
+
+[Removing Duplicate Values]{.underline}
+
+The unique function was employed to eliminate duplicate rows from the dataset.This step ensures that each row in the dataset is unique, avoiding redundancy.
+
+```{r}
+# data <- unique(data)
+```
+
+[Rounding Population Numbers]{.underline}
+
+The round function in R was utilized to round population numbers to integers.This step ensures that population numbers are represented as integers in the dataset.
+
+```{r}
+# data$population <- round(data$population)
+```
+
+[After all]{.underline}
+
+By implementing these data cleaning and preprocessing steps, the dataset is now more suitable for analysis, with addressed issues related to missing data, outliers, duplicate values, and non-integer population numbers.
+
+## Feature
+
+The original data seessed with two file, for each has 18 and 26 variable. The variable are categorized by group which is: years from 1912 to 1936, population form the 1393 to 1910 years, it also has the distance to coast, river, zhuxi academy. The last group with single variable of private bank exsist, post office exsist, genealogy books exsist, interest rate.
+
+[Banks Panel Data]{.underline}
+
+In the Banks Panel Data we have 18 variable, for each on has the explaination of the variable and range.
+
+-   Prefecture ID for analyses (city name) \[character\]
+-   Area_sqm(Land area)\[779.8-131190.2\]
+-   Pop1393(population in 1393)\[1.931-1793.890\]
+-   Pop1580(population in 1580)\[5.793-3646.040\]
+-   Pop1630(population in 1630)\[7.771-4407.390\]
+-   Pop1680(population in 1680)\[4.58-3415.81\]
+-   Pop1776(population in 1776)\[36.09-5293\]
+-   Pop1820(population in 1820)\[43.43-6663\]
+-   Pop1851(population in 1851)\[51.06-7981\]
+-   Pop1880(population in 1880)\[36-6847\]
+-   Pop1910(population in 1910)\[45-7577\]
+-   Disttreaty1897(distance to treaty port in 1897)\[0-811.3\]
+-   Genalogy1896_prefmatch(number of genealogy books in 1896)\[0-1931\]
+-   Pop1920(population in 1920)\[20.32-12155.84\]
+-   Distshort3(distance to zhuxi academy)\[0-2083.7\]
+-   Coa_dis(distance to coast)\[2.186-1924.738\]
+-   Riv_dis(distance to river)\[0.1414-1524.1503\]
+-   Pri_bank(private bank annual number in 5years)\[0-187\]
+
+[Interest Rate Data]{.underline}
+
+In the Banks Panel Data we have 26 variable, for each on has the explaination of the variable and range.
+
+-   Province\[Character\]
+-   Year\[1912-1936\]
+-   interestrate(interest rate of each lending record)\[0-8400\]
+-   lender(lender type) \[bank/foreigner bank\]
+-   pop1776(population in 1776)\[9-529\]
+-   pop1820(population in 1820)\[11.7-666.3\]
+-   pop1851(population in 1851)\[13.5-798.1\]
+-   pop1880(population in 1880)\[7.9-684.7\]
+-   pop1910(population in 1910)\[12.4-757.7\]
+-   coastal_distance(distance to coast)\[2.186-1614\]
+-   river_distance(distance to river)\[0.1414-1299.39\]
+-   area_sqm(land area)\[1093-137401\]
+-   genealogy1911(number of genealogy books in1911)\[0-2261\]
+-   civilwars(number of civil conflicts)\[0-12\]
+-   chambermemberp1913(Number of members of chamber of commerce in 1913)\[0-15669\]
+-   urban1910(urbanization rate in 1910)\[0-43.2\]
+-   protestantmissinaries1920(number of protestant missionaries in 1920)\[0-558\]
+-   disttreaty1897(distance to treaty ports)\[0-684.5\]
+-   firms1911(number of industrial firms in 1911)\[0-221\]
+-   telegraphp_1911(number of telegraph stations in 1911)\[24-560\]
+-   postofficep_1911(number of post offices in 1911)\[24-560\]
+-   pop1393(population in 1393)\[4-516\]
+-   pop1580(population in 1580)\[23-3646.04\]
+-   pop1630(population in 1630)\[30-4407.39\]
+-   pop1680(population in 1680)\[7.779-3415.808\]
+-   distshort(distance to zhu xi academy)\[0-1846.9\]
+
+# Results
+
+Confucian culture is expected to have important effects on the achievement of harmonious relationships, enhancement of mutual trust, and compromise in terms of the conflicting interests between borrowers and lenders, therefore, reducing transaction costs and information asymmetry in informal household financing(Xiaohui Hou, 2022). On the one hand, Confucianism has fostered cohesion among clans and strengthened familial bonds, deepening financial relationships among relatives and friends. Simultaneously, it has imposed constraints on external financial engagements, leading to a reluctance within clans to engage in trade and commerce with outsiders.
+
+To Confucius, the ideal person is a scholar bureaucrat, not a successful entrepreneur. His (or her) priority should be on serving society at large, not on making personal gains and profit（Yifeng Yuan，2006). Confucianism primarily emphasizes connections among relatives and friends, aiming to contribute to society rather than engaging in external service. This explains why, influenced by Confucian thought, China, prior to the Opium Wars, resisted external financial interactions.
+
+By examining the number of bank establishments from 1897 to 1936, with 1897 marking the peak of Confucian influence in China, and utilizing data from 283 regions significantly influenced by Confucian thought, a comparative analysis was conducted. After removing outliers and missing values, the data was thoroughly cleaned.
+
+The resulting graph clearly illustrates that regions deeply influenced by familial ties have fewer bank establishments compared to regions with less profound familial influence. Analyzing the slopes of the lines in the chart, it is evident that areas deeply influenced by familial ties exhibit gradual and stable growth. In contrast, regions with less familial influence may experience explosive growth, as indicated by the steepness of their lines.
+
+```{r}
+
+```
+
+
+Through the analysis of the images above, we can deduce that following the Opium War from 1839 to 1841, the influence of Western technology and capital became evident. This compelled the Chinese financial market to adopt Western financial institutions. China adopted a large-scale approach to learning and importing Western capital, actively engaging in the establishment of modern banks and securities institutions. This significantly increased the number of modern bank establishments in most regions, with areas less influenced by familial ties exhibiting a steep growth.
+
+In contrast, regions deeply influenced by familial ties remained reluctant to engage in foreign trade, experiencing a shallower impact. Through the analysis of regions influenced by familial ties and the number of modern bank establishments, it is evident that Confucianism in China hampers external financing, leading to a slow pace of financial development.
