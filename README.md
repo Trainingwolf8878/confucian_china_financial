@@ -16,9 +16,9 @@ Some of the code are written with the help of ChatGPT, the entire chat history w
 ## File Structure
 
 * /inputs/sketches : with some sketchs with the dataset
-* /inputs/data/raw_data : some raw datasets
-* /inputs/data/cleaned_data : cleaned row datasets
-* /inputs/data/simulated_data : simulated datasets
+* /inputs/data/raw_data : some raw datasets(contain the test of data)
+* /inputs/data/cleaned_data : cleaned row datasets(contain the test of data)
+* /inputs/data/simulated_data : simulated datasets(contain the test of data)
 * /inputs/llm : The LLM usage with ChatGPT entire chat history
 * /inputs/sketches: it contain the sketch of the table and graph
 * /outputs/graphs : contains graphs that work on the R
