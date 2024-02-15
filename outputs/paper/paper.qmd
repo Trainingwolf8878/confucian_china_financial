@@ -27,9 +27,6 @@ library(knitr)
 
 Code and data are available at:"github.com/Trainingwolf8878/confucian_china_financial" ; Replication on Social Science Reproduction platform available at: "https://doi.org/10.48152/ssrp-qjr2-1r37"
 
-# Information
-
-Code and data are available at:"github.com/Trainingwolf8878/confucian_china_financial" ; Replication on Social Science Reproduction platform available at: "https://doi.org/10.48152/ssrp-qjr2-1r37"
 
 # Introduction
 
@@ -177,7 +174,7 @@ include_graphics("/cloud/project/outputs/graphs/figure2b.png")
 
 In the second graph, we explored another variable originating from Eastern China. Located near countries such as Korea and Japan, we were curious whether external factors, such as geographical environment, might play a role. As the majority of the data primarily came from the southwestern part of China, where Confucianism had a deep influence, we wondered if there were differences in the Eastern region due to lighter influence of Confucianism, possibly influenced by geographical reasons.
 
-Through the analysis of the visuals, we observed that regardless of the Eastern or Western regions, Confucian cultural influence profoundly impacts the development of modern banks in China. This suggests a general reluctance to embrace foreign capital, possibly influenced by the enduring impact of Confucian values.（Figure 2)
+Through the analysis of the visuals, we observed that regardless of the Eastern or Western regions, Confucian cultural influence profoundly impacts the development of modern banks in China. In esatern of China confucius believed in the importance of education in order to create this virtuous character. He thought that people are essentially good yet may have strayed from the appropriate forms of conduct.  This suggests a general reluctance to embrace foreign capital, possibly influenced by the enduring impact of Confucian values.（Figure 2)
 
 # Discussion
 
@@ -208,11 +205,45 @@ Future research directions could involve a more in-depth analysis of cultural in
 ## Accounting for Bias
 
 In this study, private bank loan data were involved, and I acknowledge that this may encroach upon individuals' privacy, as the disclosure of private loan information typically requires informed consent. The privacy of such private loan data is protected. In the dataset, specific provinces and regions were detailed, and I obscured the regions by changing variables to numeric codes (0-500). Notably, the dataset revealed significant outliers in bank interest rates, indicating the presence of potentially illicit interest income in private lending. To address this, I applied outlier removal, restricting the interest rate range to within 100%.
-
+  
+  
+  
+  
+  
+  
 # References
 
 Chen, T., Kung, J.K. and Ma, C. (2020) Long live keju! the persistent effects of China’s Civil Examination System, OUP Academic. Available at: https://academic.oup.com/ej/article/130/631/2030/5819954 (Accessed: 14 February 2024).
+  
+  
+Entrepreneurship education needed in China (2014) Financial Times. Available at: https://www.ft.com/content/80529984-876b-11e3-9c5c-00144feab7de#axzz3UoIN8EAa (Accessed: 11 February 2024).
+  
+  
+Author links open overlay panelXiaohui Hou a et al. (2022) Confucian culture and informal household financing: Evidence from China’s counties, Borsa Istanbul Review. Available at: https://www.sciencedirect.com/science/article/pii/S2214845022000497 (Accessed: 12 February 2024).
+  
+  
+Confucianism (no date) Education. Available at: https://education.nationalgeographic.org/resource/confucianism/ (Accessed: 12 February 2024). 
+  
+  
+14.1. Overview - AFNI, Suma and fatcat: V24.0.06 (no date) National Institute of Mental Health. Available at: https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/codex/overview.html (Accessed: 13 February 2024). 
+  
+  
+The R project for statistical computing (no date) R. Available at: https://www.r-project.org/ (Accessed: 13 February 2024). 
+  
+  
+Chen, Z., Ma, C. and Sinclair, A.J. (2021) Banking on the Confucian clan: Why China developed Financial Markets so late, OUP Academic. Available at: https://academic.oup.com/ej/article/132/644/1378/6382992?login=false#353294862 (Accessed: 11 February 2024). 
+  
+  
+Confucianism (2024) Wikipedia. Available at: https://en.wikipedia.org/wiki/Confucianism (Accessed: 12 February 2024). 
+  
+  
+Confucianism summary (no date) Encyclopædia Britannica. Available at: https://www.britannica.com/summary/Confucianism (Accessed: 12 February 2024). 
+  
+  
+(No date) What is confucianism. Available at: https://baijiahao.baidu.com/s?id=1623251099553340696&wfr=spider&for=pc (Accessed: 10 February 2024). 
+  
+  
+(No date a) The main concepts of Confucianism. Available at: https://philosophy.lander.edu/oriental/main.html (Accessed: 15 February 2024). 
 
-Entrepreneurship education needed in China (2014) Financial Times. Available at: https://www.ft.com/content/80529984-876b-11e3-9c5c-00144feab7de#axzz3UoIN8EAa (Accessed: 14 February 2024).
 
-Author links open overlay panelXiaohui Hou a et al. (2022) Confucian culture and informal household financing: Evidence from China’s counties, Borsa Istanbul Review. Available at: https://www.sciencedirect.com/science/article/pii/S2214845022000497 (Accessed: 14 February 2024).
+
