@@ -22,11 +22,11 @@ df <- data.frame(
 
 ggplot(df, aes(x = year)) +
   geom_line(aes(y = weak_clan), color = "blue", linetype = "solid", size = 1) +
-  geom_line(aes(y = strong_clan), color = "red", linetype = "dashed", size = 1) +
+  geom_line(aes(y = strong_clan), color = "gray", linetype = "dashed", size = 1) +
   geom_label(aes(x = max(df$year), y = max(c(tail(df$weak_clan, 1), tail(df$strong_clan, 1)))),
              label = "Weak Clan", color = "blue", hjust = 0, vjust = 1) +
   geom_label(aes(x = max(df$year), y = min(c(tail(df$weak_clan, 1), tail(df$strong_clan, 1)))),
-             label = "Strong Clan", color = "red", hjust = 0, vjust = 0) +
+             label = "Strong Clan", color = "gray", hjust = 0, vjust = 0) +
   labs(title = "Line Plot of Weak Clan and Strong Clan over Years",
        x = "Year",
        y = "Values") +
@@ -35,4 +35,4 @@ ggplot(df, aes(x = year)) +
 
 #### Save the image ####
 
-ggsave("Figure 2a.png")
+ggsave("figure2a.png")

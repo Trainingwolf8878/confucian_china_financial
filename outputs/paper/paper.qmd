@@ -151,13 +151,60 @@ To Confucius, the ideal person is a scholar bureaucrat, not a successful entrepr
 
 By examining the number of bank establishments from 1897 to 1936, with 1897 marking the peak of Confucian influence in China, and utilizing data from 283 regions significantly influenced by Confucian thought, a comparative analysis was conducted. After removing outliers and missing values, the data was thoroughly cleaned.
 
-The resulting graph clearly illustrates that regions deeply influenced by familial ties have fewer bank establishments compared to regions with less profound familial influence. Analyzing the slopes of the lines in the chart, it is evident that areas deeply influenced by familial ties exhibit gradual and stable growth. In contrast, regions with less familial influence may experience explosive growth, as indicated by the steepness of their lines.
+The resulting graph clearly illustrates that regions deeply influenced by familial ties have fewer bank establishments compared to regions with less profound familial influence. Analyzing the slopes of the lines in the chart, it is evident that areas deeply influenced by familial ties exhibit gradual and stable growth. In contrast, regions with less familial influence may experience explosive growth, as indicated by the steepness of their lines.(Figure 1)
 
-```{r}
+```{r, echo=FALSE}
+
+include_graphics("/cloud/project/outputs/graphs/figure2a.png")
 
 ```
-
 
 Through the analysis of the images above, we can deduce that following the Opium War from 1839 to 1841, the influence of Western technology and capital became evident. This compelled the Chinese financial market to adopt Western financial institutions. China adopted a large-scale approach to learning and importing Western capital, actively engaging in the establishment of modern banks and securities institutions. This significantly increased the number of modern bank establishments in most regions, with areas less influenced by familial ties exhibiting a steep growth.
 
 In contrast, regions deeply influenced by familial ties remained reluctant to engage in foreign trade, experiencing a shallower impact. Through the analysis of regions influenced by familial ties and the number of modern bank establishments, it is evident that Confucianism in China hampers external financing, leading to a slow pace of financial development.
+
+```{r, echo=FALSE}
+include_graphics("/cloud/project/outputs/graphs/figure2b.png")
+```
+
+In the second graph, we explored another variable originating from Eastern China. Located near countries such as Korea and Japan, we were curious whether external factors, such as geographical environment, might play a role. As the majority of the data primarily came from the southwestern part of China, where Confucianism had a deep influence, we wondered if there were differences in the Eastern region due to lighter influence of Confucianism, possibly influenced by geographical reasons.
+
+Through the analysis of the visuals, we observed that regardless of the Eastern or Western regions, Confucian cultural influence profoundly impacts the development of modern banks in China. This suggests a general reluctance to embrace foreign capital, possibly influenced by the enduring impact of Confucian values.（Figure 2)
+
+# Discussion
+
+## Explanation of result
+
+By analyzing and comparing the construction of modern banks in regions deeply influenced by clan dynamics, we deduced that Confucianism hampers economic development in China. At the beginning of the article, we employed hypothesis testing to examine whether clan-oriented thinking obstructs financial progress. While simulating data, we discovered that the recorded data values had a mean. We hypothesized that regions with a strong influence of clan dynamics would exhibit slower economic development, whereas regions with weaker clan influence would experience better economic growth. Specific images related to these hypotheses can be found in the "inputs/sketch" directory.
+
+## Important about the research
+
+Furthermore, traditional Chinese culture, still influenced significantly by Confucian values such as “obedience”, “respect for authority” and above all “emotional control”, is not naturally compatible with typical entrepreneurial values(2014,mike).This study holds significant importance for a deeper understanding of the role of Confucianism in China's financial development, as well as for comparing how different cultures shape financial systems. It provides valuable insights for future research and contributes to the formulation of policies that may enhance financial systems. By contrasting China's Confucianist ideals with the Western reliance on corporate entities and group collaborations, it highlights the diverse impact of cultures on financial development. This aids in a profound comprehension of how cultural differences influence economic systems.
+
+## Constraints
+
+For this study, there are significant limitations. Firstly, China's development model is not easily transferable to other countries, as each nation possesses unique historical, cultural, and economic backgrounds. China's specific conditions and experiences may not be directly applicable to other countries, warranting caution when attempting to generalize its development model. For example, In the era of the imperial examination, it was far from enough for candidates to learn the Four Books and Five Classics to achieve good results. Candidates also needed to refer to annotations of the Four Books and Five Classics and current affairs articles published by the government (Chen et al., 2020).
+
+Secondly, the impact of Confucianism-induced changes on history is unique globally. Other countries may have distinct cultural traditions and values, posing a challenge to the applicability of Confucianist principles in different cultural contexts. Thus, it is not feasible to directly apply China's Confucianist model to any country without considering the influences of diverse cultural backgrounds.
+
+Lastly, our understanding and transformation of economic development in the Chinese region are primarily reliant on data and conclusions. However, the limitation lies in the fact that this approach may not comprehensively reveal the complete historical context and profound cultural influences. Economic development is a complex process influenced by various factors, and relying solely on data and conclusions may not fully capture this complexity.
+
+Therefore, the conclusions of this study should be interpreted with caution, particularly when applying them to other countries or cultures. Acknowledging the limitations of the research, it is essential to exercise caution and flexibility when generalizing and applying the study's findings.
+
+## Future
+
+This study has significant limitations, as the developmental patterns observed in China cannot be directly applied to other countries. Additionally, the impact of Confucianism on historical changes introduces complexities that make it challenging to generalize findings globally. The constraints lie in the understanding and alteration of economic development in Chinese regions solely through data and conclusions.
+
+Future research directions could involve a more in-depth analysis of cultural influences, further exploring the specific mechanisms through which Confucianism affects financial development. This includes investigating how cultural beliefs influence financial decision-making within families and clans, and how these dynamics evolve across different historical periods. Another avenue for exploration is the examination of the interaction between clan systems and societal transformations, studying how Confucianism's influence on clan systems responds to the pressures of social change and modernization. Lastly, investigating family businesses and their relationship with finance could provide insights into the distinctive characteristics of these enterprises under the influence of Confucian culture, impacting their financing, management, and long-term development.
+
+## Accounting for Bias
+
+In this study, private bank loan data were involved, and I acknowledge that this may encroach upon individuals' privacy, as the disclosure of private loan information typically requires informed consent. The privacy of such private loan data is protected. In the dataset, specific provinces and regions were detailed, and I obscured the regions by changing variables to numeric codes (0-500). Notably, the dataset revealed significant outliers in bank interest rates, indicating the presence of potentially illicit interest income in private lending. To address this, I applied outlier removal, restricting the interest rate range to within 100%.
+
+# References
+
+Chen, T., Kung, J.K. and Ma, C. (2020) Long live keju! the persistent effects of China’s Civil Examination System, OUP Academic. Available at: https://academic.oup.com/ej/article/130/631/2030/5819954 (Accessed: 14 February 2024).
+
+Entrepreneurship education needed in China (2014) Financial Times. Available at: https://www.ft.com/content/80529984-876b-11e3-9c5c-00144feab7de#axzz3UoIN8EAa (Accessed: 14 February 2024).
+
+Author links open overlay panelXiaohui Hou a et al. (2022) Confucian culture and informal household financing: Evidence from China’s counties, Borsa Istanbul Review. Available at: https://www.sciencedirect.com/science/article/pii/S2214845022000497 (Accessed: 14 February 2024).
