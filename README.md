@@ -7,6 +7,8 @@ This repo will follow a reproduction of Zhiwu Chen, Chicheng Ma and Andrew J. Si
 
 The original data : <https://doi.org/10.5281/zenodo.5525846>
 
+Replication on Social Science Reproduction platform available at: https://doi.org/10.48152/ssrp-qjr2-1r37
+
 ## Statement on LLM Usage
 
 Some of the code are written with the help of ChatGPT, the entire chat history with ChatGPT is available in inputs/llms/usage.txt
@@ -14,11 +16,13 @@ Some of the code are written with the help of ChatGPT, the entire chat history w
 ## File Structure
 
 * /inputs/sketches : with some sketchs with the dataset
-* /inputs/data : some raw datasets
+* /inputs/data/raw_data : some raw datasets
+* /inputs/data/cleaned_data : cleaned row datasets
+* /inputs/data/simulated_data : simulated datasets
 * /inputs/llm : The LLM usage with ChatGPT entire chat history
+* /inputs/sketches: it contain the sketch of the table and graph
 * /outputs/graphs : contains graphs that work on the R
 * /outputs/paper : The final paper and table use in the report
-* /outputs/data : some simulated datasets
 * /scripts : R scripts used for data analysis
 
 ## Contact information
