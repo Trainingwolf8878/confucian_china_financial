@@ -23,6 +23,14 @@ library(dplyr)
 library(knitr)
 ```
 
+# Where can find me
+
+Code and data are available at:"github.com/Trainingwolf8878/confucian_china_financial" ; Replication on Social Science Reproduction platform available at: "https://doi.org/10.48152/ssrp-qjr2-1r37"
+
+# Information
+
+Code and data are available at:"github.com/Trainingwolf8878/confucian_china_financial" ; Replication on Social Science Reproduction platform available at: "https://doi.org/10.48152/ssrp-qjr2-1r37"
+
 # Introduction
 
 Over the course of millennia, the trajectory of China's financial development has been shaped by the influence of clan-based cultural ideologies, molding the values, social structure, and financial framework of the Chinese people. After the Opium War, the power of Western technology and capital became evident, force China's financial market to adopt Western financial institutions. By contrasting the corporate entity system in Western countries with the clan-based system in Chinese Confucian thought, this research explores the impact of these two systems on social and economic development. Chinese Confucian thought emphasizes the role of family and kinship in economic factors, while Western legal systems prioritize rules and laws. The peak of clan influence in China was in 1897. Utilizing the growth in genealogy density in 283 regions heavily influenced by clan ideologies, the study compares the growth of modern bank constructions in these areas. It is observed that when genealogy density doubles, there is a 5.6% reduction in bank density. This comparison reveals that robust clan relationships hinder financial development. Through theoretical reasoning and empirical data, the study argues that the West adopted corporations for interpersonal cooperation, whereas China focused on clan-based systems. This institutional choice, emerging after the rise of long-distance ocean trade, resulted in divergent trajectories in financial development. The paper will follow a reproduction of Zhiwu Chen, Chicheng Ma and Andrew J. Sinclair and “Banking on The Confucian Clan: Why China Developed Financial Markets So Late.” The reproduction was conducted using the statistical programming language R (R Core Team 2020). To further enable out analysis we employed the use of the following packages: Tidyverse, Janitor, ggplot2, usethis, gitcreds, knitr. The paper begins with the introduction of the background and discussion of the data source. Then make a review of the variables used for reproduction. The estimand which we intend to do interest is to assess whether the elevation in bank lending is influenced by Confucian factors. Based on the interesting question, I am validating whether modern young people are willing to engage in lending activities through a Google survey. Thus, to assess whether modern young people have been influenced less by Confucian ideology.
